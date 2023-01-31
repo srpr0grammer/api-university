@@ -57,7 +57,6 @@ async def update(id: int, course_schema: CourseSchema, db: AsyncSession = Depend
         course.title = course_schema.title
         course.classes = course_schema.classes
         course.hours = course_schema.hours
-
         await session.commit()
 
         return course
